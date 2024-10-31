@@ -405,7 +405,7 @@ input[type=number] {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    display: none;
 }
 .bagha{
     display: none;

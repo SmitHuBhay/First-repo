@@ -18,6 +18,7 @@ function update() {
 }
 // start 
 start.addEventListener("click", () => { startTimer() })
+
 function startTimer() {
     if (!isPaused) return;
     console.log("playing...");
@@ -53,17 +54,15 @@ function resetTimer() {
 }
 // timings
 function timing() {
-    {
-        seconds++;
-        if (seconds >= 60) {
-            seconds = 0;
-            //minute
-            minutes++;
-            if (minutes >= 59) {
-                minutes = 0;
-                //hour
-                hours++;
-            }
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        //minute
+        minutes++;
+        if (minutes >= 59) {
+            minutes = 0;
+            //hour
+            hours++;
         }
     }
     update(seconds);
