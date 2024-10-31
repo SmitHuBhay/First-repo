@@ -1,0 +1,35 @@
+
+
+.sidebar {
+    top: 0px;
+    position: fixed;
+    left: -200px; 
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease-in-out; 
+    padding: 15px;
+}
+
+.sidebar h2 {
+    margin: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Button {
+    border: none;
+}

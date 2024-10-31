@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #e8bcb9a3; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    /* background-color: #dbd7d7; */
+    /* box-sizing: border-box; */
+    margin-top: 25vh;
+    border: 5px solid;
+    border-radius: 30px;
+    min-width: 30vw;
+    min-height: 40vh;
+    padding: 5px;
+}
+
+.stopwatch {
+    box-sizing: border-box;
+    padding: 0 2vh;
+    min-width: 30vw;
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 30%;
+    min-height: 30vh;
+    box-sizing: border-box;
+}
+
+.box {
+    cursor: default;
+    display: flex;
+    min-height: 25vh;
+    min-width: 10vw;
+    max-height: 25vh;
+    max-width: 10vw;
+    border-radius: 25px;
+    /* background-color: #645452; */
+    align-items: center;
+    justify-content: center;
+    /* color: #dfcdb7; */
+    font-size: 100px;
+    font-family: sans-serif;
+}
+
+.deceleration {
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    /* color: #b87333; */
+}
+
+/* buttons */
+.hmm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20vh;
+    min-width: 100%;
+}
+/* reset  */
+.buttonz {
+    
+    position: relative;
+}
+
+
+.button-reset {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    gap: 8px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    background: #ff362b34;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.label {
+
+    line-height: 20px;
+    font-size: 17px;
+    color: hsl(3, 100%, 58%);
+    letter-spacing: 1px;
+}
+
+.button-reset:hover {
+    background: #ff362b52;
+}
+
+.button-reset:hover .svg-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#reset {
+    display: flex;
+    justify-content: space-around;
+    top: 20px;
+    left: 20px;
+}
+
+/* Start */
+/*bg*/
+/*txt*/
+/*success*/
+.buttons {
+    max-width: 150px;
+    display: flex;
+    justify-content: space-around;
+    /* top: 20px; */
+    /* left: 20px; */
+}
+
+.buttons button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    /* margin: 20px; */
+    color: #568fa6;
+    position: relative;
+    overflow: hidden;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.buttons button:before,
+.buttons button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+    left: 0;
+    bottom: 0;
+}
+
+.buttons button span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.buttons button span:before,
+.buttons button span:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #44d8a4;
+    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:before {
+    right: 0;
+    top: 0;
+    transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:after {
+    left: 0;
+    bottom: 0;
+}
+
+.buttons button p {
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons button p:before,
+.buttons button p:after {
+    position: absolute;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    z-index: 1;
+    left: 0;
+}
+
+.buttons button p:before {
+    content: attr(data-title);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttons button p:after {
+    content: attr(data-text);
+    top: 150%;
+    color: #44d8a4;
+}
+
+.buttons button:hover:before,
+.buttons button:hover:after {
+    width: 100%;
+}
+
+.buttons button:hover span {
+    z-index: 1;
+}
+
+.buttons button:hover span:before,
+.buttons button:hover span:after {
+    height: 100%;
+}
+
+.buttons button:hover p:before {
+    top: -50%;
+    transform: rotate(5deg);
+}
+
+.buttons button:hover p:after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttons button.start {
+    background-color: #44d8a4;
+    box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.buttons button.start p:before {
+    top: -50%;
+    transform: rotate(5deg);
+}
+
+.buttons button.start p:after {
+    color: white;
+    transition: all 0s ease;
+    content: attr(data-start);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: start 0.3s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes start {
+    from {
+        top: -50%;
+    }
+}
+
+.buttons button.start:hover:before,
+.buttons button.start:hover:after {
+    display: none;
+}
+
+.buttons button.start:hover span {
+    display: none;
+}
+
+.buttons button:active {
+    outline: none;
+    border: none;
+}
+
+.buttons button:focus {
+    outline: 0;
+}
+
+/* stop */
+
+.cont {
+    position: absolute;
+    --color: #a5a5b0;
+    --size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+}
+
+.cont .play {
+    position: absolute;
+    animation: keyframes-fill .5s;
+}
+
+.cont .pause {
+    position: absolute;
+    display: none;
+    animation: keyframes-fill .5s;
+}
+
+/* ------ On check event ------ */
+.cont input:checked~.play {
+    display: none;
+}
+
+.cont input:checked~.pause {
+    display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.cont input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+    0% {
+        transform: rotate(-180deg) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(-10deg) scale(1.2);
+    }
+}
+.buttoms{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: hsla(95, 100%, 58%, 0.594);
+}
+
+.class{
+    position: absolute;
+    height: 50px;
+    width: 150px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.input{
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+.bagha{
+    display: none;
+}

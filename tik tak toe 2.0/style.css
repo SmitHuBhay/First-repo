@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #122620;
+}
+body{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.container{
+    z-index: 3;
+    height: 60vh;
+    width: 60vh;
+    background-color: #b68d40;
+    margin: 10vh auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.box{
+    height: 27%;
+    width: 27%;
+    background-color: white;
+    border-radius: 1rem;
+    align-content: center;
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+    background-color: #f4ebd0;
+    border: none;
+}
+.button{
+    align-self: center;
+    height: 10vh;
+    width: 30vh;
+    background-color: #d6ad60;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    font-family: "Poppins",sans-serif;
+    font-weight: 800;
+    color: rgb(186, 118, 35);
+    border-radius: 0.5em;
+    margin: auto;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.2px;
+    z-index: 2;
+    
+}
+.box{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.button{
+    border: none;
+}
+.button:hover{
+    border: 1px solid brown;
+    transition-property: border;
+    transition-duration: 0.2s;
+}
+.box:hover{
+    border: 1px solid brown;
+    transition-property: border;
+    transition-duration: 0.2s;
+}
+.border{
+    border: 2px solid brown !important;
+    color: black;
+}
+.shadow{
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* .message{
+    height: 100vh !important;
+    width: 100vw !important;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 30vh;
+    color: aqua;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: "Poppins",sans-serif;
+}
+.afterwin{
+    position: relative;
+    top: 10vh;
+    transform: scale(2);
+} */
+

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #16325B;
+}
+
+.container{
+    margin: 0 auto 0 auto;
+    width: 80vh;
+    height: fit-content;
+    position: relative;
+    top: 10vh;
+    /* margin: 0 20vw 0 20vw; */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    /* border: 2px solid black; */
+    align-items: center;
+    justify-content: center;
+}
+/* h2{
+    font-family: "baloo bhaijan 2" , sans-serif;
+    color: #282142;
+    background-color: #7A306C;
+    font-size: 350%;
+    text-align: center;
+    height: 10vh;
+    width: 100vw;
+} */
+.box{
+    box-sizing: border-box;
+    display: flex;
+    font-family: "baloo bhaijan 2",sans-serif;
+    border: 0 solid rgb(71, 37, 37);
+    background-color: #FFDC7F;
+    align-items: center;
+    justify-content: center;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    font-family: "baloo bhaijaan 2";
+    font-size: 7rem;
+    color: rgb(75, 38, 11) ;
+    padding-top: 3%;
+}
+.box:hover{
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.6) inset;
+    box-sizing: border-box;
+    transition-property: border;
+    transition-duration: 0;
+    transition-timing-function: ease-in;
+}
+.shadow{
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.6) inset;
+}
+.winner{
+    border: 2px solid black;
+    height: 100vh;
+    text-align: center;
+    /* display: none; */
+}
+.win-msg{
+    position: relative;
+    top: 10vh;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 100px;
+    font-family: "Poppins",sans-serif;
+    color: #DBFE87;
+    /* box-sizing: border-box; */
+    border-radius: 2rem;
+    border:9px solid #000000;
+    /* outline: 2px solid black; */
+    padding: 2%;
+    text-shadow: 3px 4px 5px black;
+}
+.odyyy{
+    background-color: #16325B;
+    height: 100vh;
+}
+.button{
+    /* display: flex; */
+    background-color: #424242;
+    color: white;
+    font-weight: 700;
+    z-index: 2;
+    position: relative;
+    height: 5vh;
+    padding: 30px;
+    font-size: 23px;
+    text-align: center;
+    justify-self: center;
+    padding-left: 5vh;
+}
+.new-button{
+    top: 20vh;
+    padding: auto 20px;
+}
+.rst-btn{
+    bottom: 10vh;
+    justify-self: center;
+}
+.reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hide{
+    display: none;
+}
+.button:hover{
+    border: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+    transition-property: all;
+    transition-duration: 0;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.6) inset;
+}
