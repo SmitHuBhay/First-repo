@@ -11,8 +11,8 @@
 
 <body>
     <div class="sidebar" id="sidebar" style="min-height: 100vh;">
-        <h2>Sidebar</h2>
         <ul>
+            <!-- <h2>Comming Soon</h2>
             <li>
                 <div class="selection">
                     <label>
@@ -21,88 +21,122 @@
                     <label>
                         <input type="radio" name="tool" value="timer" id="timer"> Timer
                     </label>
+            </li> -->
+            <li>
+                <div class="theme-selector">
+                    <h3>Select Theme</h3>
+                    <label>
+                        <input type="radio" name="theme" value="light" checked>
+                        Light Mode
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="theme" value="dark">
+                            Gray Mode
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="theme" value="black">
+                        Black Mode
+                    </label>
+                </div>
             </li>
+        </ul>
     </div>
-    </ul>
-    </div>
-    <button id="Button">Sidebar</button>
-    <main>
-        <div class="stopwatch">
-            <div class="container">
-                <p class="deceleration">Hour</p>
-                <div class="hour box">0
-                    <input class="box hour input"
-                        style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
-                        type="number" id="userInput" />
-                    <!-- <p class="box hour">0</p> -->
+    <nav>
+
+        <button class="btn" id="Button">
+            <span class="icon">
+                <svg viewBox="0 0 175 80" width="40" height="40">
+                    <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                    <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                </svg>
+            </span>
+            <span class="text">MENU</span>
+        </button>
+    </nav>
+    <div class="body">
+        <main>
+            <div class="stopwatch">
+                <div class="container">
+                    <p class="deceleration">Hour</p>
+                    <div class="hour box">0
+                        <input class="box hour input"
+                            style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
+                            type="number" id="userInput" />
+                        <!-- <p class="box hour">0</p> -->
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="deceleration">Minute</p>
+                    <div class="box minute">0
+                        <input class="box minute input"
+                            style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
+                            type="number" id="userInput" />
+                        <!-- <p class="box minute">0</p> -->
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="deceleration">Seconds</p>
+                    <div class="box seconds">0
+                        <input class="box seconds input"
+                            style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
+                            type="number" id="userInput" required />
+                        <!-- <p class="box seconds">0</p> -->
+                    </div>
                 </div>
             </div>
-            <div class="container">
-                <p class="deceleration">Minute</p>
-                <div class="box minute">0
-                    <input class="box minute input"
-                        style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
-                        type="number" id="userInput" />
-                    <!-- <p class="box minute">0</p> -->
+            <!-- buttons -->
+            <div class="hmm">
+                <div class="buttonz">
+                    <div class="button button-1 Reset" id="Reset">
+                        <button class="button-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20"
+                                fill="none" class="svg-icon" id="buffer">
+                                <g stroke-width="1.5" stroke-linecap="round" stroke="red">
+                                    <path
+                                        d="m3.33337 10.8333c0 3.6819 2.98477 6.6667 6.66663 6.6667 3.682 0 6.6667-2.9848 6.6667-6.6667 0-3.68188-2.9847-6.66664-6.6667-6.66664-1.29938 0-2.51191.37174-3.5371 1.01468">
+                                    </path>
+                                    <path
+                                        d="m7.69867 1.58163-1.44987 3.28435c-.18587.42104.00478.91303.42582 1.0989l3.28438 1.44986">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span class="label">Reset</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="container">
-                <p class="deceleration">Seconds</p>
-                <div class="box seconds">0
-                    <input class="box seconds input"
-                        style="position:absolute;border: none; padding-left: 10px; box-sizing: border-box;"
-                        type="number" id="userInput" required />
-                    <!-- <p class="box seconds">0</p> -->
+                <div class="buttons Start">
+                    <div class="button button-2 ">
+                        <button class="n"><span></span>
+                            <p data-start="good luck!" data-text="start!" data-title="START"></p>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- buttons -->
-        <div class="hmm">
-            <div class="buttonz">
-                <div class="button button-1 Reset" id="Reset">
-                    <button class="button-reset">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 20 20" height="20" fill="none"
-                            class="svg-icon">
-                            <g stroke-width="1.5" stroke-linecap="round" stroke="#ff342b">
-                                <path
-                                    d="m3.33337 10.8333c0 3.6819 2.98477 6.6667 6.66663 6.6667 3.682 0 6.6667-2.9848 6.6667-6.6667 0-3.68188-2.9847-6.66664-6.6667-6.66664-1.29938 0-2.51191.37174-3.5371 1.01468">
-                                </path>
-                                <path
-                                    d="m7.69867 1.58163-1.44987 3.28435c-.18587.42104.00478.91303.42582 1.0989l3.28438 1.44986">
-                                </path>
-                            </g>
-                        </svg>
-                        <span class="label">Reset</span>
-                    </button>
-                </div>
-            </div>
-            <div class="buttons Start">
-                <div class="button button-2 ">
-                    <button class=n"><span></span>
-                        <p data-start="good luck!" data-text="start!" data-title="START"></p>
-                    </button>
-                </div>
-            </div>
-            <div class="buttoms Stop">
-                <div class="button button-3 ">
-                    <!-- <p class="stopdec">STOP
+                <div class="buttoms Stop">
+                    <div class="button button-3 ">
+                        <!-- <p class="stopdec">STOP
 
                     </p> -->
-                    <label class="cont">
-                        <input checked="checked" type="checkbox" id="change">
-                        <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="play class">
-                            <path fill="black"
-                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
-                            </path>
-                        </svg>
-                        <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="pause class">
-                            <path fill="black"
-                                d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z">
-                            </path>
-                        </svg></label>
+                        <label class="cont">
+                            <input checked="checked" type="checkbox" id="change">
+                            <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+                                class="play class">
+                                <path fill="white"
+                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+                                </path>
+                            </svg>
+                            <svg viewBox="0 0 320 512" height="1em" xmlns="http://www.w3.org/2000/svg"
+                                class="pause class">
+                                <path fill="white"
+                                    d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z">
+                                </path>
+                            </svg></label>
+                    </div>
                 </div>
-            </div>
-    </main>
+        </main>
+    </div>
     <script src="script.js"></script>
     <script src="theme.js"></script>
     <script src="sidebar.js"></script>

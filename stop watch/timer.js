@@ -1,9 +1,9 @@
 // button
-// const start = document.querySelector(".Start");
-// const reset = document.querySelector(".Reset");
-// const pause = document.querySelector(".pause");
-// const play = document.querySelector(".play");
-// let isPaused = true;
+const start = document.querySelector(".Start");
+const reset = document.querySelector(".Reset");
+const pause = document.querySelector(".pause");
+const play = document.querySelector(".play");
+let isPaused = true;
 
 // update display
 function update() {

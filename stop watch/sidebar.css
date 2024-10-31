@@ -1,15 +1,15 @@
-
-
 .sidebar {
+    z-index: 0;
     top: 0px;
     position: fixed;
     left: -200px; 
-    width: 200px;
-    height: 100vh;
-    background-color: #333;
+    width: 170px;
+    top: 7.5vh;
+    height: 90vh;
     color: white;
     transition: left 0.3s ease-in-out; 
     padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .sidebar h2 {
@@ -28,8 +28,15 @@
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-}
+} 
 
-.Button {
+/* .Button {
     border: none;
+} */
+#button{
+    position: relative;
+    display: inline-block;
+    left: 0px !important;
+    top: 0px !important;
+    z-index: 10;
 }
