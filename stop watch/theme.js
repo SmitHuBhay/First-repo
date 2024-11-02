@@ -62,7 +62,7 @@ function black(){
     nav.style.backgroundColor = "#111"
     body.backgroundColor = "#000000"
     main.backgroundColor = "#000000"
-    border.borderColor = "#000000"
+    border.borderColor = "#fff"
     reset_bgc.backgroundColor = "black"
     document.querySelector(".n").children[1].style.color = "white"
     document.querySelector(".n").children[0].style.backgroundColor = "black"
