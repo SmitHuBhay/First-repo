@@ -99,9 +99,9 @@ main {
     cursor: default;
     display: flex;
     min-height: 25vh;
-    min-width: 10vw;
+    min-width: 13vw;
     max-height: 25vh;
-    max-width: 10vw;
+    max-width: 13vw;
     border-radius: 25px;
     /* background-color: #645452; */
     align-items: center;
@@ -381,7 +381,9 @@ main {
     user-select: none;
     fill: var(--color);
 }
-
+.cont:focus {
+    outline: 2px solid #a5a5b0; /* Adjust color to fit your theme */
+}
 .cont .play {
     position: absolute;
     animation: keyframes-fill .5s;
@@ -449,7 +451,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 input[type=number] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 

@@ -24,18 +24,25 @@ function startTimer() {
     console.log("playing...");
     isPaused = false; // Mark as playing
     //soul of webpage
+    checkbox.checked = !checkbox.checked;
     timer = setInterval(() => {
         timing();
     }, 1000);
 }
 //play
-play.addEventListener("click", () => { startTimer() })
+const checkbox = document.getElementById('change');
+
+play.addEventListener("click", () => { startTimer();playTimer()})
+function playTimer() {
+    checkbox.checked = !checkbox.checked;
+    
+}
 //pause
 pause.addEventListener("click", () => { pauseTimer() })
 function pauseTimer() {
     if (isPaused) return;
     isPaused = true; // Mark as paused
-    clearInterval(timer)
+    clearInterval(timer);
     console.log("paused...")
 }
 //reset

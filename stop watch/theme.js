@@ -36,6 +36,7 @@ function light(){
     document.querySelector(".n").children[0].style.backgroundColor = "white"
     document.querySelector(".Stop").style.backgroundColor = "hsla(95, 100%, 58%, 0.594)" ;
     changeArray(box_bg,box_txt,dec_txt);
+    
 }
 
 light()
