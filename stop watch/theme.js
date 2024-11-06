@@ -5,12 +5,12 @@ const boxes = document.querySelectorAll('.box');
 const txt = document.querySelectorAll(".deceleration")
 const nav = document.querySelector("nav")
 const reset_bgc = document.querySelector(".button-reset").style
-document.querySelectorAll('input[name="theme"]')[0].addEventListener("change",()=>{light()})
-document.querySelectorAll('input[name="theme"]')[1].addEventListener("change",()=>{dark()})
-document.querySelectorAll('input[name="theme"]')[2].addEventListener("change",()=>{black()})
+document.querySelectorAll('input[name="theme"]')[0].addEventListener("change", () => { light() })
+document.querySelectorAll('input[name="theme"]')[1].addEventListener("change", () => { dark() })
+document.querySelectorAll('input[name="theme"]')[2].addEventListener("change", () => { black() })
 
 
-function changeArray(box_bg,box_txt,color_txt) {
+function changeArray(box_bg, box_txt, color_txt) {
     boxes.forEach(box => {
         box.style.backgroundColor = `${box_bg}`;
         box.style.color = `${box_txt}`
@@ -22,7 +22,7 @@ function changeArray(box_bg,box_txt,color_txt) {
 
 
 
-function light(){
+function light() {
     dec_txt = "#b87333";
     box_bg = "#645452";
     box_txt = "#dfcdb7";
@@ -34,13 +34,13 @@ function light(){
     reset_bgc.backgroundColor = "#ff362b72"
     document.querySelector(".n").children[1].style.color = "#568fa6"
     document.querySelector(".n").children[0].style.backgroundColor = "white"
-    document.querySelector(".Stop").style.backgroundColor = "hsla(95, 100%, 58%, 0.594)" ;
-    changeArray(box_bg,box_txt,dec_txt);
-    
+    document.querySelector(".Stop").style.backgroundColor = "hsla(95, 100%, 58%, 0.594)";
+    changeArray(box_bg, box_txt, dec_txt);
+
 }
 
 light()
-function dark(){
+function dark() {
     dec_txt = "#bfbfbf";
     box_bg = "#2e2e2e";
     box_txt = "#bfbfbf"
@@ -53,9 +53,9 @@ function dark(){
     document.querySelector(".n").children[0].style.backgroundColor = "gray"
     document.querySelector(".Stop").style.backgroundColor = "gray"
     document.querySelector(".n").children[1].style.color = "white"
-    changeArray(box_bg,box_txt,dec_txt)
+    changeArray(box_bg, box_txt, dec_txt)
 }
-function black(){
+function black() {
     dec_txt = "#ffffff";
     box_bg = "#000000";
     box_txt = "#ffffff"
@@ -69,5 +69,5 @@ function black(){
     document.querySelector(".n").children[0].style.backgroundColor = "black"
     document.querySelector(".n").children[1].style.color = "white"
     document.querySelector(".Stop").style.backgroundColor = "black"
-    changeArray(box_bg,box_txt,dec_txt)
+    changeArray(box_bg, box_txt, dec_txt)
 }

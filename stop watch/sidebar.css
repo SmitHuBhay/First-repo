@@ -2,12 +2,12 @@
     z-index: 0;
     top: 0px;
     position: fixed;
-    left: -200px; 
+    left: -200px;
     width: 170px;
     top: 7.5vh;
     height: 90vh;
     color: white;
-    transition: left 0.3s ease-in-out; 
+    transition: left 0.3s ease-in-out;
     padding: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -28,12 +28,12 @@
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-} 
+}
 
 /* .Button {
     border: none;
 } */
-#button{
+#button {
     position: relative;
     display: inline-block;
     left: 0px !important;

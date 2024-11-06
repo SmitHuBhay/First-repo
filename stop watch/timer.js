@@ -45,21 +45,21 @@ function resetTimer() {
     pauseTimer()
 }
 function timing() {
-    
-        seconds--;
-        if (seconds = 0) {
-            seconds = 60;
-            //minute
-            minutes--;
-            if (minutes < 0) {
-                minutes = 59;
-                //hour
-                hours--;
-                if (hours < 0) {
-                    // Timer finished
-                    clearInterval(timerInterval); // Stop the timer
-                    console.log("Time's up!");
-                    return;
+
+    seconds--;
+    if (seconds = 0) {
+        seconds = 60;
+        //minute
+        minutes--;
+        if (minutes < 0) {
+            minutes = 59;
+            //hour
+            hours--;
+            if (hours < 0) {
+                // Timer finished
+                clearInterval(timerInterval); // Stop the timer
+                console.log("Time's up!");
+                return;
             }
         }
     }

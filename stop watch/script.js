@@ -32,10 +32,10 @@ function startTimer() {
 //play
 const checkbox = document.getElementById('change');
 
-play.addEventListener("click", () => { startTimer();playTimer()})
+play.addEventListener("click", () => { startTimer(); playTimer() })
 function playTimer() {
     checkbox.checked = !checkbox.checked;
-    
+
 }
 //pause
 pause.addEventListener("click", () => { pauseTimer() })
