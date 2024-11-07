@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="centre">
+    <div role="main" class="main" id="BG">
+        <div class="search">
+            <input type="search" name="" id="searchbox" placeholder="Enter your city :">
+            <button type="button" role="button" id="button" class="center"><img src="assets/search-alt-svgrepo-com.svg"
+                    class="icon" srcset=""></button>
+        </div>
+        <div class="error">Invalid City Name</div>
+        <div class="information" id="info">
+            <div class="weather centre"><img src="assets/Clear.png" alt="Cannot display image" srcset=""
+                    class="Weather-icon"></div>
+            <div class="temp">
+                <p class="Temperature">&deg;C</p>
+                <p class="city">City</p>
+            </div>
+            <div class="subinformation">
+                <div class="humidity centre" style="gap: 10px; position: relative">
+                    <img src="assets/humidity.png" alt="" class="icon">
+                    <p class="humid">: &ThickSpace;%</p>
+                    <p style="position:absolute;bottom: -20px;color: white;font-size: 18px;">humidity</p>
+                </div>
+                <div class="windspeed centre" style="gap: 10px;position: relative;">
+                    <img src="assets/windy.png" alt="" class="icon">
+                    <p class="wind">: &ThickSpace; km/hr</p>
+                    <p style="position:absolute;bottom: -20px;color: white;font-size: 18px;text-wrap: nowrap;">Wind
+                        Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
