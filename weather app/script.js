@@ -1,7 +1,7 @@
 const search = document.querySelector("#searchbox")
 const button = document.querySelector("#button")
 const apiKey = "7d5e74e7b112e34001dc87b79a2fc7c3";
-const apiUrl =  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const icon = document.querySelector(".Weather-icon")
 const BG = document.getElementById("BG")
 async function GetWeather(city) {
@@ -18,6 +18,7 @@ async function GetWeather(city) {
     document.querySelector(".error").style.display = "none";
     document.querySelector("#info").style.display = "block";
     console.log(data)
+    document.querySelector(".weather-display").innerHTML = `${data.weather[0].main}`;
     document.querySelector(".Weather-icon").src = `assets/${data.weather[0].main}.png`
     document.querySelector(".Temperature").innerHTML = `${data.main.temp} &deg;C`
     document.querySelector(".city").innerHTML = `${data.name}`
@@ -28,7 +29,7 @@ async function GetWeather(city) {
 button.addEventListener("click", () => {
   GetWeather(search.value)
 })
-search.addEventListener("keydown",((event)=>{
+search.addEventListener("keydown", ((event) => {
   if (event.key === 'Enter') {
     GetWeather(search.value)
   }
